@@ -34,18 +34,26 @@ public class Employee {
     * */
 
     // Role
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_role")
+    //@Column
     private Role role;
 
+
     // project
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_project")
+    //@Column
     private Project project;
+
+
 
     /*
     * Las relaciones Mucho a Muchos (@ManyToMany) se caracterízan por Entidades que están relacionadas con a muchos elementos de un tipo determinado
     * */
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "employee_project",
             joinColumns = { @JoinColumn(name = "employee_id") },
