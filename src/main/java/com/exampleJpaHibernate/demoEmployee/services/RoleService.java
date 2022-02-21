@@ -5,10 +5,12 @@ package com.exampleJpaHibernate.demoEmployee.services;
 import com.exampleJpaHibernate.demoEmployee.models.Role;
 import com.exampleJpaHibernate.demoEmployee.repositories.IRoleJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class RoleService {
 
     @Autowired

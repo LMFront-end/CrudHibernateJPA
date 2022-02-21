@@ -60,6 +60,10 @@ public class Employee {
             inverseJoinColumns = { @JoinColumn(name = "project_id")})
     private List<Project> projects = new ArrayList<>();
 
-
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "employee_role",
+            joinColumns = { @JoinColumn(name = "employee_id") },
+            inverseJoinColumns = { @JoinColumn(name = "role_id")})
+    private List<Project> roles = new ArrayList<>();
 
 }
